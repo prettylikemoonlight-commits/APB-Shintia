@@ -36,15 +36,15 @@ CREATE TABLE IF NOT EXISTS transaksi (
 );
 
 -- Insert default admin (password: admin123)
-INSERT INTO users (nama, username, password, role) VALUES 
+INSERT IGNORE INTO users (nama, username, password, role) VALUES 
 ('Administrator', 'admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
 
 -- Insert example user (password: user123)
-INSERT INTO users (nama, username, password, role, kelas) VALUES 
+INSERT IGNORE INTO users (nama, username, password, role, kelas) VALUES 
 ('Shintia Kurniawan', 'shinta', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user', 'XII RPL 2');
 
 -- Insert dummy books
-INSERT INTO buku (judul, pengarang, penerbit, tahun, stok, kategori) VALUES 
+INSERT IGNORE INTO buku (judul, pengarang, penerbit, tahun, stok, kategori) VALUES 
 ('Filosofi Teras', 'Henry Manampiring', 'Kompas', 2019, 10, 'Self Improvement'),
 ('Atomic Habits', 'James Clear', 'Gramedia', 2018, 5, 'Self Improvement'),
 ('Harry Potter and the Sorcerer\'s Stone', 'J.K. Rowling', 'Scholastic', 1997, 3, 'Fantasy'),

@@ -36,4 +36,3 @@ function calculateDenda($tanggal_kembali_seharusnya, $tanggal_kembali_aktual) {
     $hari = $diff->days;
     return $hari * 1000; // Denda 1000 per hari
 }
-?>

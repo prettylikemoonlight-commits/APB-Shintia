@@ -1,6 +1,6 @@
 <?php
-require_once '../config/koneksi.php';
-require_once '../config/functions.php';
+require_once __DIR__ . '/../config/koneksi.php';
+require_once __DIR__ . '/../config/functions.php';
 checkLogin();
 checkRole('user');
 
@@ -38,7 +38,7 @@ $stmt = $pdo->prepare($query);
 $stmt->execute([$userId]);
 $transactions = $stmt->fetchAll();
 
-require_once '../includes/header.php';
+require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <?php if ($success): ?>
@@ -94,4 +94,4 @@ require_once '../includes/header.php';
     </div>
 </div>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

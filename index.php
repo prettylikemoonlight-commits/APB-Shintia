@@ -1,5 +1,5 @@
 <?php
-require_once 'config/functions.php';
+require_once __DIR__ . '/config/functions.php';
 
 if (!isset($_SESSION['user_id'])) {
     redirect('auth/login.php');

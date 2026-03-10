@@ -10,7 +10,7 @@ function redirect($url) {
 
 function checkLogin() {
     if (!isset($_SESSION['user_id'])) {
-        redirect('auth/login.php');
+        redirect('../auth/login.php');
     }
 }
 

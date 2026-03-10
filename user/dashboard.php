@@ -1,6 +1,6 @@
 <?php
-require_once '../config/koneksi.php';
-require_once '../config/functions.php';
+require_once __DIR__ . '/../config/koneksi.php';
+require_once __DIR__ . '/../config/functions.php';
 checkLogin();
 checkRole('user');
 
@@ -15,7 +15,7 @@ $dipinjam = $countDipinjam->fetchColumn();
 // Recommended books
 $books = $pdo->query("SELECT * FROM buku ORDER BY created_at DESC LIMIT 4")->fetchAll();
 
-require_once '../includes/header.php';
+require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <div class="card animate-fade-in" style="background: linear-gradient(135deg, var(--primary), var(--primary-hover)); color: white; display: flex; align-items: center; justify-content: space-between; border: none; margin-bottom: 2.5rem;">
@@ -49,4 +49,4 @@ require_once '../includes/header.php';
     <?php endforeach; ?>
 </div>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

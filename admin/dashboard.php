@@ -1,6 +1,6 @@
 <?php
-require_once '../config/koneksi.php';
-require_once '../config/functions.php';
+require_once __DIR__ . '/../config/koneksi.php';
+require_once __DIR__ . '/../config/functions.php';
 checkLogin();
 checkRole('admin');
 
@@ -18,7 +18,7 @@ $recentTransactions = $pdo->query("SELECT t.*, u.nama, b.judul
                                    JOIN buku b ON t.id_buku = b.id_buku 
                                    ORDER BY t.created_at DESC LIMIT 5")->fetchAll();
 
-require_once '../includes/header.php';
+require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
@@ -74,4 +74,4 @@ require_once '../includes/header.php';
     </div>
 </div>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

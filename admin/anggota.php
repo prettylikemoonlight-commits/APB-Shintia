@@ -1,6 +1,6 @@
 <?php
-require_once '../config/koneksi.php';
-require_once '../config/functions.php';
+require_once __DIR__ . '/../config/koneksi.php';
+require_once __DIR__ . '/../config/functions.php';
 checkLogin();
 checkRole('admin');
 
@@ -23,7 +23,7 @@ $stmt = $pdo->prepare($query);
 $stmt->execute(["%$search%", "%$search%"]);
 $members = $stmt->fetchAll();
 
-require_once '../includes/header.php';
+require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
@@ -73,4 +73,4 @@ require_once '../includes/header.php';
     </div>
 </div>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>
